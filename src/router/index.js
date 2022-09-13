@@ -5,6 +5,7 @@ import AboutView from '../views/AboutView.vue';
 import LoginView from '../views/LoginView';
 import SellView from '../views/SellView';
 import ProductDetail from '../views/ProductDetail';
+import WishList from '../views/WishList';
 
 Vue.use(VueRouter);
 
@@ -33,6 +34,11 @@ const routes = [
     path: '/detail',
     name: 'ProductDetail',
     component: ProductDetail,
+  },
+  {
+    path: '/wish',
+    name: 'WishList',
+    component: WishList,
   },
 ];
 
