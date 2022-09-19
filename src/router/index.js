@@ -6,6 +6,8 @@ import LoginView from '../views/LoginView';
 import SellView from '../views/SellView';
 import ProductDetail from '../views/ProductDetail';
 import WishList from '../views/WishList';
+import TransactionHistory from '../views/TransactionHistory';
+import MyPage from '../views/MyPage';
 
 Vue.use(VueRouter);
 
@@ -39,6 +41,16 @@ const routes = [
     path: '/wish',
     name: 'WishList',
     component: WishList,
+  },
+  {
+    path: '/mypage',
+    name: 'MyPage',
+    component: MyPage,
+  },
+  {
+    path: '/transactionhistory',
+    name: 'TransactionHistory',
+    component: TransactionHistory,
   },
 ];
 
