@@ -4,15 +4,14 @@
     <div class="line"></div>
     <div class="product-detail-container">
       <div>
-        <ItemInfo></ItemInfo>
+        <ItemInfo v-bind:product="product"></ItemInfo>
         <div class="product-detail">
           <div class="header">상품정보</div>
           <div class="line"></div>
           <div>
             <div class="product-detail-area">
               <p>
-                저희 학교 교양 필수인 융합적 사고와 글쓰기 책 팝니다~ 밑줄
-                두어번 그은게 다입니다!
+                {{ info }}
               </p>
             </div>
             <div class="seller-info-area" id="seller-info-area">
@@ -24,8 +23,8 @@
                   alt="프로필"
                 />
                 <div class="detail">
-                  <div class="name">초코송이</div>
-                  <div>컴퓨터과학과</div>
+                  <div class="name">{{ seller.name }}</div>
+                  <div>{{ seller.major }}</div>
                 </div>
               </div>
               <div class="seller-detail-container">
@@ -35,13 +34,18 @@
                     <tbody>
                       <tr>
                         <th><div>거래 횟수</div></th>
-                        <td><div>50</div></td>
+                        <td>
+                          <div>{{ seller.dealNum }}</div>
+                        </td>
                       </tr>
                       <tr>
                         <th><div>신뢰 온도</div></th>
                         <td>
                           <div>
-                            <progress value="80" max="100"></progress>
+                            <progress
+                              :value="seller.trustTem"
+                              max="100"
+                            ></progress>
                           </div>
                         </td>
                       </tr>
@@ -50,7 +54,10 @@
                 </div>
                 <div class="line" id="line3"></div>
                 <div class="deal-review-header">
-                  <div>거래 후기(<span>5</span>)</div>
+                  <div>
+                    거래 후기(<span>{{ seller.reviewNum }}</span
+                    >)
+                  </div>
                   <a href=""
                     ><img
                       src="../assets/res/go.png"
@@ -61,21 +68,12 @@
                 </div>
                 <div class="reviewers">
                   <ul>
-                    <li>
-                      <ReviewComment></ReviewComment>
-                    </li>
-                    <div class="line" id="line3"></div>
-                    <li>
-                      <ReviewComment></ReviewComment>
-                    </li>
-                    <div class="line" id="line3"></div>
-                    <li>
-                      <ReviewComment></ReviewComment>
-                    </li>
-                    <div class="line" id="line3"></div>
-                    <li>
-                      <ReviewComment></ReviewComment>
-                    </li>
+                    <ReviewComment
+                      v-for="(reviewer, i) in reviewers"
+                      :key="i"
+                      v-bind:reviewer="reviewer"
+                    >
+                    </ReviewComment>
                   </ul>
                 </div>
               </div>
@@ -89,21 +87,11 @@
         <div class="header">동일 카테고리 다른 상품</div>
         <div class="other-products">
           <ul>
-            <li>
-              <AnotherItem></AnotherItem>
-            </li>
-            <li>
-              <AnotherItem></AnotherItem>
-            </li>
-            <li>
-              <AnotherItem></AnotherItem>
-            </li>
-            <li>
-              <AnotherItem></AnotherItem>
-            </li>
-            <li>
-              <AnotherItem></AnotherItem>
-            </li>
+            <AnotherItem
+              v-for="(item, i) in items"
+              :key="i"
+              v-bind:item="item"
+            ></AnotherItem>
           </ul>
         </div>
       </div>
@@ -122,6 +110,75 @@ export default {
     ItemInfo,
     ReviewComment,
     AnotherItem,
+  },
+  data() {
+    return {
+      product: {
+        id: '0',
+        title: '융사글 책 팝니다',
+        price: '20,000',
+        img: 'https://dummyimage.com/200/F6A9A9/464660',
+        like: 23,
+        view: 60,
+        time: 1,
+        name: '융합적 사고와 글쓰기',
+        method: '직거래',
+      },
+      info: '저희 학교 교양 필수인 융합적 사고와 글쓰기 책 팝니다~ 밑줄 두어번 그은게 다입니다!',
+      seller: {
+        name: '초코송이',
+        major: '컴퓨터과학과',
+        dealNum: 50,
+        trustTem: 70,
+        reviewNum: 5,
+      },
+      reviewers: [
+        {
+          name: '컴과송이',
+          major: '컴퓨터과학과',
+          review: '거래 감사합니다! 좋은 책 저렴하게 잘 쓰도록 하겠습니다',
+        },
+        {
+          name: '딸기송이',
+          major: '소프트웨어융합학과',
+          review: 'good',
+        },
+        {
+          name: '소융송이',
+          major: '명창고양이하현상학과',
+          review:
+            '정말 너어ㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓ무 좋아요 미쳤엉요 완전 굿',
+        },
+        {
+          name: 'abcdefghijkl',
+          major: 'Sample Product1',
+          review:
+            ' 이젠 머리가 어지러워 어느새 해는 져 있고난 오늘이 무슨 요일인지도 모르고 사나 봐 어질러진 방은 치울 엄두조차 나질 않고 침대 위에 누워 얼마나 잘 수 있나 생각해',
+        },
+      ],
+      items: [
+        {
+          title: 'Sample Product1',
+          img: 'https://dummyimage.com/200/F6A9A9/464660',
+        },
+        {
+          title: 'Sample Product2',
+          img: 'https://dummyimage.com/200/FFBF86/464660',
+        },
+        {
+          title: 'Sample Product3',
+          img: 'https://dummyimage.com/200/FFF47D/464660',
+        },
+        {
+          title: 'Sample Product4',
+          img: 'https://dummyimage.com/200/C2F784/464660',
+        },
+        {
+          title: 'Sample Product5',
+          img: 'https://dummyimage.com/200/C2F784/464660',
+        },
+      ],
+    };
   },
 };
 </script>
@@ -238,11 +295,6 @@ export default {
   margin: auto;
 }
 
-.product-detail .seller-info-area .seller-detail-container #line3 {
-  border-bottom: 1px solid #dddddd;
-  margin: 20px 0;
-}
-
 .seller-detail-container th,
 .seller-detail-container td,
 .deal-review-header div {
@@ -263,7 +315,7 @@ export default {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 9px;
+  margin-bottom: 6px;
 }
 
 .reviewers ul {
@@ -277,11 +329,9 @@ export default {
   font-weight: 500;
   font-size: 20px;
 }
+
 .other-products-container .other-products ul {
   display: flex;
   justify-content: space-between;
-}
-.other-products-container .other-products ul li {
-  text-align: center;
 }
 </style>

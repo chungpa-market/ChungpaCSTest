@@ -3,15 +3,21 @@
     <div class="img-area">
       <img
         src="../assets/res/no-picture.png"
-        width="367"
-        height="408"
+        width="337"
+        height="382"
         alt="상품 사진"
       />
     </div>
     <div class="detail-area">
       <div class="product-header">
-        <h2>융사글 책 팝니다</h2>
-        <span>20,000원</span>
+        <div>
+          <h2>{{ product.title }}</h2>
+          <span>{{ product.price }}</span>
+        </div>
+        <div class="detail-btn-container">
+          <button>수정</button>
+          <button>삭제</button>
+        </div>
       </div>
       <div id="line2"></div>
       <div class="post-info-icon-container" id="post-info-icon-container">
@@ -21,7 +27,7 @@
             width="14"
             height="13"
             alt="찜한수"
-          /><span>23</span>
+          /><span>{{ product.like }}</span>
         </div>
         <div><img src="../assets/res/세로 구분줄.png" alt="줄" /></div>
         <div class="icon">
@@ -30,7 +36,7 @@
             width="20"
             height="13"
             alt="조회수"
-          /><span>60</span>
+          /><span>{{ product.view }}</span>
         </div>
         <div><img src="../assets/res/세로 구분줄.png" alt="줄" /></div>
         <div class="icon">
@@ -39,7 +45,7 @@
             width="14"
             height="14"
             alt="업로드 시간"
-          /><span>1시간 전</span>
+          /><span>{{ product.time }}시간 전</span>
         </div>
       </div>
       <div>
@@ -47,32 +53,15 @@
           <tbody>
             <tr>
               <th><div>상품명</div></th>
-              <td><div>상품명</div></td>
-            </tr>
-            <tr>
-              <th><div>원가</div></th>
-              <td><div>20000원</div></td>
-            </tr>
-            <tr>
-              <th><div>가격 제안 받기</div></th>
               <td>
-                <div>
-                  <img
-                    src="../assets/res/가격제안check.png"
-                    width="18px"
-                    height="18px"
-                    alt="Y or N"
-                  />
-                </div>
+                <div>{{ product.name }}</div>
               </td>
             </tr>
             <tr>
               <th><div>희망 거래 방식</div></th>
               <td>
                 <div>
-                  <span>직거래</span>
-                  <span>택배 거래</span>
-                  <span>사물함 거래</span>
+                  <span>{{ product.method }}</span>
                 </div>
               </td>
             </tr>
@@ -117,7 +106,12 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: 'ItemInfo',
+  props: {
+    product: Object,
+  },
+};
 </script>
 
 <style>
@@ -128,13 +122,19 @@ export default {};
 
 .sell-info-container .img-area {
   float: left;
-  width: 36.5%;
+  width: 35.5%;
 }
 
 .sell-info-container .detail-area {
   height: 100%;
   float: right;
-  width: 63.5%;
+  width: 64.5%;
+}
+
+.sell-info-container .product-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
 .sell-info-container .product-header h2 {
@@ -147,6 +147,22 @@ export default {};
 .sell-info-container .product-header span {
   font-size: 30px;
   font-weight: 600;
+}
+
+.sell-info-container .detail-btn-container button {
+  width: 64px;
+  height: 32px;
+  background: #0035d3;
+  border-radius: 10px;
+  color: white;
+  border-color: #0035d3;
+  font-weight: 550;
+  font-size: 14px;
+  margin-left: 8px;
+}
+
+.sell-info-container table {
+  margin: 40px 0;
 }
 
 .sell-info-container table th,
@@ -173,7 +189,7 @@ td {
 
 #post-info-icon-container {
   width: 205px;
-  margin: 4px 0 10px 0;
+  margin: 4px 0 13px 0;
 }
 
 .post-info-icon-container .icon {
@@ -188,15 +204,20 @@ td {
   padding-left: 3px;
 }
 
-.btn-container ul {
+.sell-info-container .btn-container {
+  margin-bottom: 13px;
+}
+
+.sell-info-container .btn-container ul {
   width: 280px;
   display: flex;
   justify-content: space-between;
   list-style-type: none;
   padding-inline-start: 0;
+  margin: 0;
 }
 
-.btn-container ul li button {
+.sell-info-container .btn-container ul li button {
   background: none;
   padding: 0;
   width: auto;

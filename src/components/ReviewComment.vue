@@ -1,40 +1,57 @@
 <template>
-  <div>
-    <div class="reviewer-profile">
-      <div>
-        <a href=""
-          ><img
-            src="../assets/res/UserCircle.png"
-            width="45"
-            height="45"
-            alt="프로필"
-        /></a>
+  <div class="reviewComment">
+    <div>
+      <div class="reviewer-profile">
+        <div>
+          <a href=""
+            ><img
+              src="../assets/res/UserCircle.png"
+              width="45"
+              height="45"
+              alt="프로필"
+          /></a>
+        </div>
+        <div class="profile-detail">
+          <div class="reviewer-name">{{ reviewer.name }}</div>
+          <div class="reviewer-major">{{ reviewer.major }}</div>
+        </div>
       </div>
-      <div class="profile-detail">
-        <div class="reviewer-name">컴과송이</div>
-        <div class="reviewer-major">컴퓨터과학과</div>
-      </div>
+      <div class="review">{{ reviewer.review }}</div>
     </div>
-    <div>거래 감사합니다! 좋은 책 저렴하게 잘 쓰도록 하겠습니다!</div>
+    <div class="line" id="line3"></div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  name: 'ReviewComment',
+  props: {
+    reviewer: Object,
+  },
+};
 </script>
 
 <style>
-.reviewer-profile .profile-detail {
+.reviewComment .reviewer-profile .profile-detail {
   padding-left: 10px;
 }
 
-.reviewer-profile .reviewer-name {
-  font-size: 13px;
+.reviewComment .reviewer-profile .reviewer-name {
+  font-size: 14.5px;
   margin-bottom: 3px;
 }
 
-.reviewer-profile .reviewer-major {
+.reviewComment .reviewer-profile .reviewer-major {
   font-size: 10px;
   color: #aaaaaa;
+}
+
+.reviewComment .review {
+  padding-left: 56px;
+}
+
+#line3 {
+  border-bottom: 1px solid #dddddd;
+  margin: 15px 0;
 }
 </style>

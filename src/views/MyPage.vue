@@ -107,7 +107,7 @@ export default {};
   width: 50%;
 }
 
-.btn-container {
+.my-info-container .btn-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
