@@ -73,6 +73,7 @@
                       :key="i"
                       v-bind:reviewer="reviewer"
                       v-bind:index="i"
+                      v-bind:length="reviewers.length"
                     >
                     </ReviewComment>
                   </ul>
