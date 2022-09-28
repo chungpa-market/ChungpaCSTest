@@ -14,7 +14,7 @@
           <h2>{{ product.title }}</h2>
           <span>{{ product.price }}</span>
         </div>
-        <div class="detail-btn-container">
+        <div class="detail-btn-container" v-if="role === '판매자'">
           <button>수정</button>
           <button>삭제</button>
         </div>
@@ -110,6 +110,7 @@ export default {
   name: 'ItemInfo',
   props: {
     product: Object,
+    role: String
   },
 };
 </script>

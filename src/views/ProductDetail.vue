@@ -4,7 +4,7 @@
     <div class="line"></div>
     <div class="product-detail-container">
       <div>
-        <ItemInfo v-bind:product="product"></ItemInfo>
+        <ItemInfo v-bind:product="product" v-bind:role="role"></ItemInfo>
         <div class="product-detail">
           <div class="header">상품정보</div>
           <div class="line"></div>
@@ -72,6 +72,7 @@
                       v-for="(reviewer, i) in reviewers"
                       :key="i"
                       v-bind:reviewer="reviewer"
+                      v-bind:index="i"
                     >
                     </ReviewComment>
                   </ul>
@@ -132,6 +133,7 @@ export default {
         trustTem: 70,
         reviewNum: 5,
       },
+      role: '판매자',
       reviewers: [
         {
           name: '컴과송이',
@@ -145,13 +147,13 @@ export default {
         },
         {
           name: '소융송이',
-          major: '명창고양이하현상학과',
+          major: 'ㅇㄹㅇㅀㅇㅀㅀ학과',
           review:
             '정말 너어ㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓㅓ무 좋아요 미쳤엉요 완전 굿',
         },
         {
           name: 'abcdefghijkl',
-          major: 'Sample Product1',
+          major: 'Sample Producㄴt1',
           review:
             ' 이젠 머리가 어지러워 어느새 해는 져 있고난 오늘이 무슨 요일인지도 모르고 사나 봐 어질러진 방은 치울 엄두조차 나질 않고 침대 위에 누워 얼마나 잘 수 있나 생각해',
         },
