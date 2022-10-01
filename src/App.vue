@@ -39,7 +39,7 @@
             alt="내 정보 아이콘"
           />
         </a>
-        <a href="" id="login">로그인</a>
+        <a href="@/views/LoginView.vue" id="login">로그인</a>
         <a href="" id="join">회원가입</a>
       </div>
     </header>

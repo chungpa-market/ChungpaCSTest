@@ -1,20 +1,15 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import HomeView from '../views/HomeView.vue';
-import AboutView from '../views/AboutView.vue';
-import LoginView from '../views/LoginView';
-import SellView from '../views/SellView';
-import ProductDetail from '../views/ProductDetail';
-import WishList from '../views/WishList';
+import LoginView from '../LoginView.vue';
+import SellView from '../views/SellView.vue';
+import ProductDetail from '../views/ProductDetail.vue';
+import WishList from '../views/WishList.vue';
+import RegistrationView from '../views/RegistrationView.vue';
+import WriteView from '../views/WriteView';
 
 Vue.use(VueRouter);
 
 const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: HomeView,
-  },
   {
     path: '/about',
     name: 'about',
@@ -39,6 +34,16 @@ const routes = [
     path: '/wish',
     name: 'WishList',
     component: WishList,
+  },
+  {
+    path: '/registration',
+    name: 'registration',
+    component: RegistrationView,
+  },
+  {
+    path: '/write',
+    name: 'write',
+    component: WriteView,
   },
 ];
 
