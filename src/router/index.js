@@ -1,19 +1,20 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import LoginView from '../LoginView.vue';
-import SellView from '../views/SellView.vue';
-import ProductDetail from '../views/ProductDetail.vue';
-import WishList from '../views/WishList.vue';
-import RegistrationView from '../views/RegistrationView.vue';
+import MainView from '../views/MainView';
+import LoginView from '../views/LoginView';
+import RegistrationView from '../views/RegistrationView';
 import WriteView from '../views/WriteView';
+import SellView from '../views/SellView';
+import ProductDetail from '../views/ProductDetail';
+import WishList from '../views/WishList';
 
 Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/about',
-    name: 'about',
-    component: AboutView,
+    path: '/',
+    name: 'main',
+    component: MainView,
   },
   {
     path: '/sell',
@@ -26,6 +27,16 @@ const routes = [
     component: LoginView,
   },
   {
+    path: '/registration',
+    name: '/registration',
+    component: RegistrationView,
+  },
+  {
+    path: '/write',
+    name: '/write',
+    component: WriteView,
+  },
+  {
     path: '/detail',
     name: 'ProductDetail',
     component: ProductDetail,
@@ -34,16 +45,6 @@ const routes = [
     path: '/wish',
     name: 'WishList',
     component: WishList,
-  },
-  {
-    path: '/registration',
-    name: 'registration',
-    component: RegistrationView,
-  },
-  {
-    path: '/write',
-    name: 'write',
-    component: WriteView,
   },
 ];
 
