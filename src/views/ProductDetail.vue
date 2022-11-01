@@ -58,13 +58,13 @@
                     거래 후기(<span>{{ seller.reviewNum }}</span
                     >)
                   </div>
-                  <a href=""
+                  <router-link href=""
                     ><img
                       src="../assets/res/go.png"
                       width="7px"
                       height="14px"
                       alt=">"
-                  /></a>
+                  /></router-link>
                 </div>
                 <div class="reviewers">
                   <ul>
