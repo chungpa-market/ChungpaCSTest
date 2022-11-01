@@ -1,8 +1,7 @@
 <template>
   <div class="wish">
     <header class="body-header">
-      <img src="../assets/res/찜하기.png" alt="" width="60px" height="60px" />찜
-      목록
+      <img src="../assets/res/찜하기.png" alt="" width="60px" height="60px" />찜목록
     </header>
     <div class="delete-btn"><button>delete</button></div>
     <section>

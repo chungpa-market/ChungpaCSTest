@@ -1,7 +1,7 @@
 <template>
-    <div class="sell">
+    <div class="buy">
       <header class="body-header">
-        <img src="../assets/res/sell 1.png" alt="" width="70px" height="70px" />팔아요
+        <img src="../assets/res/buy 1.png" alt="" width="70px" height="70px" />살래요
       </header>
       <section>
         <ItemComp></ItemComp>
@@ -14,6 +14,7 @@
 
 <script>
 import ItemComp from '@/components/ItemComp.vue';
+
 export default {
   name: 'ProductDetail',
   components: {
@@ -23,7 +24,7 @@ export default {
 </script>
 
 <style>
-.sell .body-header {
+.buy .body-header {
   width: 205px;
   display: flex;
   justify-content: space-between;
@@ -33,7 +34,7 @@ export default {
   font-size: 30px;
 }
 
-.sell section {
+.buy section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
