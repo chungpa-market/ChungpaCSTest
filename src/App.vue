@@ -88,7 +88,8 @@
         </ul>
       </nav>
       <div class="line" id="line1"></div>
-
+    </div>
+  </div>
 </template>
 
 <script>

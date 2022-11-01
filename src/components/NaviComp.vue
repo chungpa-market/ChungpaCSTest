@@ -11,12 +11,12 @@
                 </a>
             </div>
             <div class="login">
-                <a href="">
+                <router-link href="" to="/login">
                     <img src="../assets/res/청파톡.png" width="36px" height="33px" alt="채팅 아이콘" />
-                </a>
-                <a href="">
+                </router-link>
+                <router-link href="" to="/mypage">
                     <img src="../assets/res/내정보.png" width="51px" height="47px" alt="내 정보 아이콘" />
-                </a>
+                </router-link>
                 <router-link href="" to="/login">로그인</router-link>
                 <router-link href="" id="join" to="/registration">회원가입</router-link>
             </div>
