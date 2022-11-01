@@ -32,7 +32,6 @@
 
 <script>
 import ItemComp from '@/components/ItemComp.vue';
-
 export default {
     name: 'wishList',
     components: {

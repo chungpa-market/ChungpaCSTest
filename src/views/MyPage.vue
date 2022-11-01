@@ -2,7 +2,12 @@
   <main>
     <div class="my-info-container">
       <div class="img-area">
-        <img src="../assets/res/UserCircle.png" width="185" height="185" alt="" />
+        <img
+          src="../assets/res/UserCircle.png"
+          width="185"
+          height="185"
+          alt=""
+        />
       </div>
       <div class="txt-area">
         <div id="name">noonsong123</div>
@@ -124,3 +129,4 @@ export default {};
   margin: 0 0 0 42px;
 }
 </style>
+

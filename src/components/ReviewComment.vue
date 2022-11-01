@@ -3,7 +3,13 @@
     <div>
       <div class="reviewer-profile">
         <div>
-          <a href=""><img src="../assets/res/UserCircle.png" width="45" height="45" alt="프로필" /></a>
+          <a href=""
+            ><img
+              src="../assets/res/UserCircle.png"
+              width="45"
+              height="45"
+              alt="프로필"
+          /></a>
         </div>
         <div class="profile-detail">
           <div class="reviewer-name">{{ reviewer.name }}{{ length }}</div>
@@ -51,3 +57,4 @@ export default {
   margin: 15px 0;
 }
 </style>
+
