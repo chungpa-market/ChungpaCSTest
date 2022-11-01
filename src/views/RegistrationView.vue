@@ -1,6 +1,11 @@
 <template>
     <form v-on:submit.prevent="registrationForm">
         <div class="registration">
+            <h1>
+                <router-link href="" to="/">
+                    <img src="../assets/res/로고3.jpg" width="90px" height="84.28px">청파마켓
+                </router-link>
+            </h1>
             <div class="registration-container">
                 <div class="id">
                     <label for='id'>아이디</label>
@@ -248,6 +253,17 @@ export default {
     margin: 0 auto;
     font-family: 'Nanum Gothic', sans-serif;
 }
+.registration h1 a{
+    display: flex;
+    margin: 100px;
+    justify-content: center;
+    align-items: flex-end;
+    font-family: 'PyeongChangPeace-Light';
+    text-decoration-line: none;
+    font-weight: 1000;
+    font-size: 60px;
+    color: #0035D3;
+}
 
 .registration .line {
     border-bottom: 0.5px solid;
@@ -361,7 +377,7 @@ export default {
 .registration .phone-number input,
 .registration .verification-code input {
     box-sizing: border-box;
-    width: 600px;
+    width: 800px;
     height: 44px;
     background: #FFFFFF;
 }

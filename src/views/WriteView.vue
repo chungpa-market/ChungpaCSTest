@@ -1,6 +1,7 @@
 <template>
     <form v-on:submit.prevent="writeForm">
         <div class="info-container">
+            <NaviComp></NaviComp>
             <ul class="type-container">
                 <li>
                     <input type="radio" name="type" id="sell" checked="checked" v-model="sell">
@@ -88,6 +89,7 @@
     </form>
 </template>
 <script>
+import NaviComp from '@/components/NaviComp.vue';
 import axios from 'axios';
 export default {
     name: 'writeForm',
@@ -98,6 +100,9 @@ export default {
             description: '', direct: '', deliver: '', locker: '',
             area: '',
         }
+    },
+    components: {
+        NaviComp,
     },
     methods: {
         writeForm: function(){
