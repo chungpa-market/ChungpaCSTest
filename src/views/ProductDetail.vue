@@ -1,6 +1,6 @@
 <template>
   <main>
-    <div class="selected"><span>도서 </span> > <span> 도서1</span></div>
+    <div class="selected"><span>도서 </span></div>
     <div class="line"></div>
     <div class="product-detail-container">
       <div>
