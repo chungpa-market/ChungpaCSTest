@@ -1,8 +1,7 @@
 <template>
-  <div id="wish">
+  <div class="wish">
     <header class="body-header">
-      <img src="../assets/res/찜하기.png" alt="" width="60px" height="60px" />찜
-      목록
+      <img src="../assets/res/찜하기.png" alt="" width="60px" height="60px" />찜목록
     </header>
     <div class="delete-btn"><button>delete</button></div>
     <section>
@@ -27,7 +26,7 @@ export default {
 </script>
 
 <style>
-.body-header {
+.wish .body-header {
   width: 182px;
   display: flex;
   justify-content: space-between;
@@ -37,13 +36,13 @@ export default {
   font-size: 33px;
 }
 
-.delete-btn {
+.wish .delete-btn {
   display: flex;
   justify-content: flex-end;
   margin: 10px 12px 0 0;
 }
 
-.delete-btn button {
+.wish .delete-btn button {
   width: 75px;
   height: 33px;
   background: #ff4f4f;
@@ -54,7 +53,7 @@ export default {
   font-size: 17px;
 }
 
-section {
+.wish section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

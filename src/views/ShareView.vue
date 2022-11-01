@@ -1,7 +1,7 @@
 <template>
-    <div class="sell">
+    <div class="share">
       <header class="body-header">
-        <img src="../assets/res/sell 1.png" alt="" width="70px" height="70px" />팔아요
+        <img src="../assets/res/buy 1.png" alt="" width="70px" height="70px" />나눠요
       </header>
       <section>
         <ItemComp></ItemComp>
@@ -24,7 +24,7 @@ export default {
 </script>
 
 <style>
-.sell .body-header {
+.share .body-header {
   width: 205px;
   display: flex;
   justify-content: space-between;
@@ -34,7 +34,7 @@ export default {
   font-size: 30px;
 }
 
-.sell section {
+.share section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

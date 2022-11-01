@@ -80,10 +80,10 @@
             <router-link href="" to="/sell">팔아요</router-link>
           </li>
           <li>
-            <a href="">살래요</a>
+            <router-link href="" to="/buy">살래요</router-link>
           </li>
           <li>
-            <a href="">나눠요</a>
+            <router-link href="" to="/share">나눠요</router-link>
           </li>
         </ul>
       </nav>
