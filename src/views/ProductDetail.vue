@@ -1,6 +1,6 @@
 <template>
   <main>
-    <div class="selected"><span>도서 </span> > <span> 도서1</span></div>
+    <div class="selected"><span>도서 </span></div>
     <div class="line"></div>
     <div class="product-detail-container">
       <div>
@@ -16,12 +16,7 @@
             </div>
             <div class="seller-info-area" id="seller-info-area">
               <div class="profile" id="profile">
-                <img
-                  src="../assets/res/UserCircle.png"
-                  width="105"
-                  height="105"
-                  alt="프로필"
-                />
+                <img src="../assets/res/UserCircle.png" width="105" height="105" alt="프로필" />
                 <div class="detail">
                   <div class="name">{{ seller.name }}</div>
                   <div>{{ seller.major }}</div>
@@ -33,19 +28,20 @@
                   <table>
                     <tbody>
                       <tr>
-                        <th><div>거래 횟수</div></th>
+                        <th>
+                          <div>거래 횟수</div>
+                        </th>
                         <td>
                           <div>{{ seller.dealNum }}</div>
                         </td>
                       </tr>
                       <tr>
-                        <th><div>신뢰 온도</div></th>
+                        <th>
+                          <div>신뢰 온도</div>
+                        </th>
                         <td>
                           <div>
-                            <progress
-                              :value="seller.trustTem"
-                              max="100"
-                            ></progress>
+                            <progress :value="seller.trustTem" max="100"></progress>
                           </div>
                         </td>
                       </tr>
@@ -55,25 +51,14 @@
                 <div class="line" id="line3"></div>
                 <div class="deal-review-header">
                   <div>
-                    거래 후기(<span>{{ seller.reviewNum }}</span
-                    >)
+                    거래 후기(<span>{{ seller.reviewNum }}</span>)
                   </div>
-                  <router-link href=""
-                    ><img
-                      src="../assets/res/go.png"
-                      width="7px"
-                      height="14px"
-                      alt=">"
-                  /></router-link>
+                  <a href=""><img src="../assets/res/go.png" width="7px" height="14px" alt=">" /></a>
                 </div>
                 <div class="reviewers">
                   <ul>
-                    <ReviewComment
-                      v-for="(reviewer, i) in reviewers"
-                      :key="i"
-                      v-bind:reviewer="reviewer"
-                      v-bind:index="i"
-                    >
+                    <ReviewComment v-for="(reviewer, i) in reviewers" :key="i" v-bind:reviewer="reviewer"
+                      v-bind:index="i" v-bind:length="reviewers.length">
                     </ReviewComment>
                   </ul>
                 </div>
@@ -88,11 +73,7 @@
         <div class="header">동일 카테고리 다른 상품</div>
         <div class="other-products">
           <ul>
-            <AnotherItem
-              v-for="(item, i) in items"
-              :key="i"
-              v-bind:item="item"
-            ></AnotherItem>
+            <AnotherItem v-for="(item, i) in items" :key="i" v-bind:item="item"></AnotherItem>
           </ul>
         </div>
       </div>
@@ -104,7 +85,6 @@
 import ItemInfo from '@/components/ItemInfo.vue';
 import ReviewComment from '@/components/ReviewComment.vue';
 import AnotherItem from '@/components/AnotherItem.vue';
-
 export default {
   name: 'ProductDetail',
   components: {

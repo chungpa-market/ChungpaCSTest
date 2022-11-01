@@ -2,12 +2,7 @@
   <main>
     <div class="my-info-container">
       <div class="img-area">
-        <img
-          src="../assets/res/UserCircle.png"
-          width="185"
-          height="185"
-          alt=""
-        />
+        <img src="../assets/res/UserCircle.png" width="185" height="185" alt="" />
       </div>
       <div class="txt-area">
         <div id="name">noonsong123</div>
@@ -23,10 +18,10 @@
           </div>
         </div>
         <div class="deal-info-a-tags">
-          <router-link class="item" href="">찜 목록</router-link>
-          <router-link class="item" href="">받은 거래 후기</router-link>
-          <router-link class="item" href="">거래 내역</router-link>
-          <router-link class="item" href="">채팅</router-link>
+          <a class="item" href="">찜 목록</a>
+          <a class="item" href="">받은 거래 후기</a>
+          <a class="item" href="">거래 내역</a>
+          <a class="item" href="">채팅</a>
         </div>
         <div class="btn-container">
           <button>내 정보 수정</button>

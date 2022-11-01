@@ -3,22 +3,16 @@
     <div>
       <div class="reviewer-profile">
         <div>
-          <a href=""
-            ><img
-              src="../assets/res/UserCircle.png"
-              width="45"
-              height="45"
-              alt="프로필"
-          /></a>
+          <a href=""><img src="../assets/res/UserCircle.png" width="45" height="45" alt="프로필" /></a>
         </div>
         <div class="profile-detail">
-          <div class="reviewer-name">{{ reviewer.name }}{{ index }}</div>
+          <div class="reviewer-name">{{ reviewer.name }}{{ length }}</div>
           <div class="reviewer-major">{{ reviewer.major }}</div>
         </div>
       </div>
       <div class="review">{{ reviewer.review }}</div>
     </div>
-    <div v-if="index !== length" class="line" id="line3"></div>
+    <div v-if="index !== length - 1" class="line" id="line3"></div>
   </div>
 </template>
 
@@ -28,6 +22,7 @@ export default {
   props: {
     reviewer: Object,
     index: Number,
+    length: Number,
   },
 };
 </script>
