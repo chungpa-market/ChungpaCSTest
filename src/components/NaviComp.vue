@@ -11,7 +11,7 @@
                 </a>
             </div>
             <div class="login">
-                <router-link href="" to="/login">
+                <router-link href="" to="">
                     <img src="../assets/res/청파톡.png" width="36px" height="33px" alt="채팅 아이콘" />
                 </router-link>
                 <router-link href="" to="/mypage">
@@ -77,7 +77,7 @@
     margin: 0 auto;
     font-weight: 100;
     font-size: 13px;
-    font-family: NanumGothic;
+    font-family: 'NanumGothic';
 }
 
 a {

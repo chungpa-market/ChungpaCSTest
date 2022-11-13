@@ -1,5 +1,6 @@
 <template>
     <div class="share">
+      <NaviComp></NaviComp>
       <header class="body-header">
         <img src="../assets/res/buy 1.png" alt="" width="70px" height="70px" />나눠요
       </header>
@@ -14,11 +15,14 @@
 
 <script>
 import ItemComp from '@/components/ItemComp.vue';
+import NaviComp from '@/components/NaviComp.vue'
 
 export default {
+  title: '나눠요',
   name: 'ProductDetail',
   components: {
     ItemComp,
+    NaviComp,
   },
 };
 </script>

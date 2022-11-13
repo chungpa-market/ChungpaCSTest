@@ -18,6 +18,7 @@
 import ItemComp from '@/components/ItemComp.vue';
 
 export default {
+  title: '장바구니',
   name: 'wishList',
   components: {
     ItemComp,

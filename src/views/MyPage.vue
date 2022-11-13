@@ -1,5 +1,6 @@
 <template>
   <main>
+    <NaviComp></NaviComp>
     <div class="my-info-container">
       <div class="img-area">
         <img
@@ -38,7 +39,13 @@
 </template>
 
 <script>
-export default {};
+import NaviComp from '@/components/NaviComp.vue';
+export default {
+  title: '마이페이지',
+  components: {
+    NaviComp,
+  }
+};
 </script>
 
 <style>

@@ -1,5 +1,6 @@
 <template>
     <div class="main">
+        <NaviComp></NaviComp>
         <header class="body-header">
             <img src="../assets/res/sell 1.png" alt="" width="70px" height="70px" />팔아요
         </header>
@@ -32,10 +33,13 @@
 
 <script>
 import ItemComp from '@/components/ItemComp.vue';
+import NaviComp from '../components/NaviComp.vue';
 export default {
+    title: '메인페이지',
     name: 'wishList',
     components: {
         ItemComp,
+        NaviComp,
     },
 };
 </script>

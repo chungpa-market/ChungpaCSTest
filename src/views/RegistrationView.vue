@@ -207,6 +207,7 @@
 <script>
 import axios from 'axios';
 export default {
+    title: '회원가입',
     name: 'registrationForm',
     data() {
         return {
@@ -268,18 +269,6 @@ export default {
 .registration .line {
     border-bottom: 0.5px solid;
     border-color: #c2c2c2;
-}
-
-.registration h1 a {
-    display: flex;
-    margin: 100px;
-    justify-content: center;
-    align-items: flex-end;
-    font-family: 'PyeongChangPeace-Light';
-    text-decoration-line: none;
-    font-weight: 1000;
-    font-size: 60px;
-    color: #0035D3;
 }
 
 .registration input {
