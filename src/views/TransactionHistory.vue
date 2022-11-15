@@ -49,7 +49,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  title: '거래내역페이지',
+};
 </script>
 
 <style>

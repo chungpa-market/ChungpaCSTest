@@ -43,6 +43,7 @@
 <script>
 import axios from 'axios';
 export default {
+  title: '로그인',
   data: function () {
     return {
       username: '',

@@ -107,6 +107,7 @@ import ReviewComment from '@/components/ReviewComment.vue';
 import AnotherItem from '@/components/AnotherItem.vue';
 
 export default {
+  title: '상세페이지',
   name: 'ProductDetail',
   components: {
     ItemInfo,

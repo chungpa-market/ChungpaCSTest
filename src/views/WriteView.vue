@@ -92,6 +92,7 @@
 import NaviComp from '@/components/NaviComp.vue';
 import axios from 'axios';
 export default {
+    title: '글작성페이지',
     name: 'writeForm',
     data(){
         return{

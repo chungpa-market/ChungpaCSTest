@@ -1,5 +1,6 @@
 <template>
     <div class="buy">
+      <NaviComp></NaviComp>
       <header class="body-header">
         <img src="../assets/res/buy 1.png" alt="" width="70px" height="70px" />살래요
       </header>
@@ -14,11 +15,14 @@
 
 <script>
 import ItemComp from '@/components/ItemComp.vue';
+import NaviComp from '@/components/NaviComp.vue'
 
 export default {
+  title: '살래요',
   name: 'ProductDetail',
   components: {
     ItemComp,
+    NaviComp,
   },
 };
 </script>

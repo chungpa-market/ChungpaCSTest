@@ -5,6 +5,8 @@ import LoginView from '../views/LoginView';
 import RegistrationView from '../views/RegistrationView';
 import WriteView from '../views/WriteView';
 import SellView from '../views/SellView';
+import ShareView from '../views/ShareView'
+import BuyView from '../views/BuyView'
 import ProductDetail from '../views/ProductDetail';
 import WishList from '../views/WishList';
 import TransactionHistory from '../views/TransactionHistory';
@@ -28,6 +30,16 @@ const routes = [
     meta: {
       title: '팔아요',
     },
+  },
+  {
+    path: '/buy',
+    name: 'buy',
+    component: BuyView,
+  },
+  {
+    path: '/share',
+    name: 'share',
+    component: ShareView,
   },
   {
     path: '/login',

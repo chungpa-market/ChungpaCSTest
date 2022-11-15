@@ -1,62 +1,46 @@
 <template>
-  <div class="main">
-    <header class="body-header">
-      <img
-        src="../assets/res/sell 1.png"
-        alt=""
-        width="70px"
-        height="70px"
-      />팔아요
-    </header>
-    <section>
-      <ItemComp></ItemComp>
-      <ItemComp></ItemComp>
-      <ItemComp></ItemComp>
-      <ItemComp></ItemComp>
-    </section>
-    <header class="body-header">
-      <img
-        src="../assets/res/buy 1.png"
-        alt=""
-        width="70px"
-        height="70px"
-      />살래요
-    </header>
-    <section>
-      <ItemComp></ItemComp>
-      <ItemComp></ItemComp>
-      <ItemComp></ItemComp>
-      <ItemComp></ItemComp>
-    </section>
-    <header class="body-header">
-      <img
-        src="../assets/res/buy 1.png"
-        alt=""
-        width="70px"
-        height="70px"
-      />나눠요
-    </header>
-    <section>
-      <ItemComp></ItemComp>
-      <ItemComp></ItemComp>
-      <ItemComp></ItemComp>
-      <ItemComp></ItemComp>
-    </section>
-  </div>
+    <div class="main">
+        <NaviComp></NaviComp>
+        <header class="body-header">
+            <img src="../assets/res/sell 1.png" alt="" width="70px" height="70px" />팔아요
+        </header>
+        <section>
+            <ItemComp></ItemComp>
+            <ItemComp></ItemComp>
+            <ItemComp></ItemComp>
+            <ItemComp></ItemComp>
+        </section>
+        <header class="body-header">
+            <img src="../assets/res/buy 1.png" alt="" width="70px" height="70px" />살래요
+        </header>
+        <section>
+            <ItemComp></ItemComp>
+            <ItemComp></ItemComp>
+            <ItemComp></ItemComp>
+            <ItemComp></ItemComp>
+        </section>
+        <header class="body-header">
+            <img src="../assets/res/buy 1.png" alt="" width="70px" height="70px" />나눠요
+        </header>
+        <section>
+            <ItemComp></ItemComp>
+            <ItemComp></ItemComp>
+            <ItemComp></ItemComp>
+            <ItemComp></ItemComp>
+        </section>
+    </div>
 </template>
 
 <script>
 import ItemComp from '@/components/ItemComp.vue';
+import NaviComp from '../components/NaviComp.vue';
 export default {
-  name: 'wishList',
-  components: {
-    ItemComp,
-  },
-  data() {
-    return {
-      title: 'main',
-    };
-  },
+    title: '메인페이지',
+    name: 'wishList',
+    components: {
+        ItemComp,
+        NaviComp,
+    },
 };
 </script>
 
