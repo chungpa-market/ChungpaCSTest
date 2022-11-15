@@ -46,17 +46,17 @@ export default {
 
 <style>
 .main .body-header {
-    width: 205px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 70px 0 0 34.988px;
-    font-weight: 800;
-    font-size: 30px;
+  width: 205px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 70px 0 0 34.988px;
+  font-weight: 800;
+  font-size: 30px;
 }
 .main section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 </style>

@@ -5,6 +5,7 @@
 </template>
 
 <script>
+
     export default{
         name: 'app',
         data(){
@@ -24,3 +25,4 @@
   font-weight: 400;
 }
 </style>
+

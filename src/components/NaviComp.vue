@@ -69,6 +69,8 @@
         </div>
         <router-view />
     </div>
+    <router-view />
+  </div>
 </template>
 
 <style>
@@ -81,156 +83,144 @@
 }
 
 a {
-    text-decoration-line: none;
-    color: black;
+  text-decoration-line: none;
+  color: black;
 }
 
 ul {
-    list-style-type: none;
-    padding-inline-start: 0;
+  list-style-type: none;
+  padding-inline-start: 0;
 }
 
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .line {
-    border-bottom: 0.5px solid;
-    border-color: black;
+  border-bottom: 0.5px solid;
+  border-color: black;
 }
 
 #line1 {
-    border-color: #c2c2c2;
+  border-color: #c2c2c2;
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header h1 {
-    font-family: 'PyeongChangPeace-Light';
-    font-weight: 1000;
-    font-size: 36px;
+  font-family: 'PyeongChangPeace-Light';
+  font-weight: 1000;
+  font-size: 36px;
 }
 
 .header h1 a {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #0035d3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #0035d3;
 }
 
 .header h1 a img {
-    padding-right: 10px;
+  padding-right: 10px;
 }
 
 .header .search-box {
-    position: relative;
-    width: 510px;
-    height: 35px;
+  position: relative;
+  width: 510px;
+  height: 35px;
 }
 
 .header .search-box .icon {
-    position: absolute;
-    top: 10px;
-    right: -7px;
+  position: absolute;
+  top: 10px;
+  right: -7px;
 }
 
 .header .search-box input {
-    width: 100%;
-    height: 100%;
-    border: 2px solid #001f7b;
-    border-radius: 38px;
-    padding: 0 0 0 25px;
-    font-weight: 520;
-    font-size: 13px;
-    font-family: NanumGothic;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #001f7b;
+  border-radius: 38px;
+  padding: 0 0 0 25px;
+  font-weight: 520;
+  font-size: 13px;
+  font-family: NanumGothic;
 }
 
 .login {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .login #login {
-    border-right: 1px solid black;
-    padding: 0 12px 0 8px;
+  border-right: 1px solid black;
+  padding: 0 12px 0 8px;
 }
 
 .login #join {
-    padding: 0 0 0 12px;
+  padding: 0 0 0 12px;
 }
 
 .nav {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    font-size: 17px;
-    margin: 7px 0px;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  font-size: 17px;
+  margin: 7px 0px;
 }
 
-.nav>li {
-    position: relative;
-    line-height: 50px;
+.nav > li {
+  position: relative;
+  line-height: 50px;
 }
 
-.nav>li>a:hover {
-    color: #0035d3;
+.nav > li > a:hover {
+  color: #0035d3;
 }
 
-.category,
-.submenu {
-    width: 208px;
-    display: none;
-    position: absolute;
-    z-index: 2;
-    background: white;
-    border-radius: 3px;
-    box-shadow: 3px 3px 13px 1px rgba(75, 75, 75, 0.15);
+.category {
+  width: 208px;
+  display: none;
+  position: absolute;
+  z-index: 2;
+  background: white;
+  border-radius: 3px;
+  box-shadow: 3px 3px 13px 1px rgba(75, 75, 75, 0.15);
 }
 
-.submenu {
-    top: 0px;
-    left: 208px;
-    z-index: 3;
-}
-
-.category>li,
-.submenu>li {
-    line-height: 30px;
-    position: relative;
-    padding: 10px 15px;
-    border-radius: 3px;
-    font-size: 16px;
+.category > li {
+  line-height: 30px;
+  position: relative;
+  padding: 10px 15px;
+  border-radius: 3px;
+  font-size: 16px;
 }
 
 .category a {
-    display: block;
+  display: block;
 }
 
-.nav>li:hover .category {
-    display: block;
-}
-
-.category>li:hover .submenu {
-    display: block;
+.nav > li:hover .category {
+  display: block;
 }
 
 .category li:hover {
-    background: #e6e6e6;
+  background: #e6e6e6;
 }
 
 .category-container {
-    display: flex;
-    align-items: baseline;
+  display: flex;
+  align-items: baseline;
 }
 
 .category-vector div {
-    width: 20px;
-    border-bottom: 2px solid;
-    padding-bottom: 4px;
-    margin-right: 10px;
+  width: 20px;
+  border-bottom: 2px solid;
+  padding-bottom: 4px;
+  margin-right: 10px;
 }
 </style>
