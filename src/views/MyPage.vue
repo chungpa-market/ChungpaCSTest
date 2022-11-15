@@ -29,7 +29,7 @@
           <a class="item" href="">채팅</a>
         </div>
         <div class="btn-container">
-          <button>내 정보 수정</button>
+          <button>글 등록</button>
           <button id="logout-btn">로그아웃</button>
         </div>
       </div>
@@ -129,4 +129,3 @@ export default {};
   margin: 0 0 0 42px;
 }
 </style>
-

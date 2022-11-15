@@ -58,19 +58,9 @@
             <ul class="category">
               <li>
                 <a href="">도서</a>
-                <ul class="submenu">
-                  <li><a href="#">Service One</a></li>
-                  <li><a href="#">Service Two</a></li>
-                  <li><a href="#">Service Three</a></li>
-                </ul>
               </li>
               <li>
                 <a href="">도서</a>
-                <ul class="submenu">
-                  <li><a href="#">Service One</a></li>
-                  <li><a href="#">Service Two</a></li>
-                  <li><a href="#">Service Three</a></li>
-                </ul>
               </li>
               <li><a href="">도서</a></li>
               <li><a href="">도서</a></li>
@@ -89,15 +79,15 @@
       </nav>
       <div class="line" id="line1"></div>
     </div>
+    <router-view />
   </div>
 </template>
 
 <script>
-    export default{
-        name: 'app',
-        data(){
-            return{   
-            }
-        }
-    }
+export default {
+  name: 'app',
+  data() {
+    return {};
+  },
+};
 </script>
