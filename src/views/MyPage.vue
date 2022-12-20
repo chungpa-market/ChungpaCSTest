@@ -30,7 +30,7 @@
           <a class="item" href="">채팅</a>
         </div>
         <div class="btn-container">
-          <button>글 등록</button>
+          <router-link to="/write"><button>글 등록</button></router-link>
           <button id="logout-btn">로그아웃</button>
         </div>
       </div>
