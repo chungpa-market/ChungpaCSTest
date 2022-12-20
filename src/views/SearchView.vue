@@ -2,26 +2,26 @@
     <div class="search">
         <NaviComp></NaviComp>
         <div class="text">
-            <p>"융합적 사고와 글쓰기"의 검색결과 6개</p>
+            <div>"융합적 사고와 글쓰기"의 검색결과 6개</div>
         </div>
         <div class="recommend_sort">
             <div class="recommend">
-                <p>추천</p>
-                <p>|</p>
-                <p>비사토</p>
-                <p>교필</p>
-                <p>영교필</p>
-                <p>논사소</p>
-                <p>교필책</p>
+                <div>추천</div>
+                <div>|</div>
+                <div>비사토</div>
+                <div>교필</div>
+                <div>영교필</div>
+                <div>논사소</div>
+                <div>교필책</div>
             </div>
             <div class="sort">
-                <p>정확도순</p>
-                <p>|</p>
-                <p>최신순</p>
-                <p>|</p>
-                <p>저가순</p>
-                <p>|</p>
-                <p>고가순</p>
+                <div>정확도순</div>
+                <div>|</div>
+                <div>최신순</div>
+                <div>|</div>
+                <div>저가순</div>
+                <div>|</div>
+                <div>고가순</div>
             </div>
         </div>
         <div class="result">
@@ -55,6 +55,8 @@ export default{
     justify-content: space-between;
 }
 .search .text{
+    margin-top: 10px;
+    margin-bottom: 10px;
     font-size: 20px;
     font-weight: 500;
 }
@@ -63,10 +65,15 @@ export default{
     padding-left: 30px;
     justify-content: space-between;
 }
-.search .recomend_sort .recommend p, 
-.search .recomend_sort .sort p{
-    flex-direction: row;
+.search .recommend_sort .recommend,
+.search .recommend_sort .sort {
     display: flex;
     justify-content: space-between;
+}
+.search .recommend_sort .recommend div {
+    width: 50px;
+}
+.search .recommend_sort .sort div{
+    width: 50px;
 }
 </style>
