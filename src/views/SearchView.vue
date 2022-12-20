@@ -16,11 +16,8 @@
             </div>
             <div class="sort">
                 <div>정확도순</div>
-                <div>|</div>
                 <div>최신순</div>
-                <div>|</div>
                 <div>저가순</div>
-                <div>|</div>
                 <div>고가순</div>
             </div>
         </div>
@@ -47,6 +44,9 @@ export default{
         ItemComp,
         NaviComp,
     },
+    props: {
+        search: Object,
+    },
 }
 </script>
 <style>
@@ -55,8 +55,8 @@ export default{
     justify-content: space-between;
 }
 .search .text{
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     font-size: 20px;
     font-weight: 500;
 }
@@ -74,6 +74,10 @@ export default{
     width: 50px;
 }
 .search .recommend_sort .sort div{
-    width: 50px;
+    width: 70px;
+}
+
+.search .recommend_sort .sort div:hover{
+    color:blue;
 }
 </style>
