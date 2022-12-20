@@ -2,13 +2,13 @@
   <div id="app">
     <header class="header">
       <h1>
-        <a href=""
+        <router-link href="" to="/"
           ><img
             src="../assets/res/로고3.jpg"
             width="55"
             height="51"
             alt="로고이미지"
-          />청파마켓</a
+          />청파마켓</router-link
         >
       </h1>
       <div class="search-box">
