@@ -2,25 +2,24 @@
   <div id="app">
     <header class="header">
       <h1>
-        <a href=""
+        <router-link href="" to="/"
           ><img
             src="../assets/res/로고3.jpg"
             width="55"
             height="51"
             alt="로고이미지"
-          />청파마켓</a
-        >
+          />청파마켓</router-link>
       </h1>
       <div class="search-box">
         <input type="text" />
-        <a href="" class="icon">
+        <router-link href="" to="/search" class="icon">
           <img
             src="../assets/res/검색 아이콘.png"
             width="20"
             height="20"
             alt="검색 버튼 아이콘"
           />
-        </a>
+        </router-link>
       </div>
       <div class="login">
         <router-link href="" to="">
