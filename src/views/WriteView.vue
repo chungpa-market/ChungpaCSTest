@@ -46,7 +46,7 @@
                     <input type="text" id="description" v-model="description">
                 </div>
 
-                <div class="line" id="line3"></div>
+                <div class="line"></div>
 
                 <div class="image">
                     <label for="image">상품 이미지</label>
@@ -76,13 +76,6 @@
 
                 <div class="line" id="line5"></div>
 
-                <div class="transaction-area">
-                    <label for="area">거래 가능 지역</label>
-                    <select name="area" id="area" v-model="area">
-                        <option value="지역 선택">지역 선택</option>
-                    </select>
-                </div>
-
                 <div class="btn-container">
                     <button type="submit">등록</button>
                 </div>
@@ -101,7 +94,6 @@ export default {
             sell: '', buy: '', share: '',
             title: '', name: '', category: '', price: '', checkbox: '',
             description: '', direct: '', deliver: '', locker: '',
-            area: '',
         }
     },
     components: {
@@ -123,7 +115,6 @@ export default {
                 direct: this.direct,
                 deliver: this.deliver,
                 locker: this.locker,
-                area: this.area,
             }
             axios.post(url, data)
                 .then(function (response) {
@@ -288,10 +279,6 @@ export default {
 .info-container .transaction-way div {
     width: 130px;
     height: 24px;
-}
-
-.info-container .transaction-area {
-    padding-right: 660px;
 }
 
 .info-container .btn-container {

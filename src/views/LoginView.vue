@@ -1,5 +1,5 @@
 <template>
-  <form v-on:submit.prevent="submitForm">
+  <form v-on:submit.prevent="submitForm" method="post">
     <div class="login-container">
       <h1>
         <router-link href="" to="/">

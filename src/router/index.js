@@ -11,6 +11,7 @@ import ProductDetail from '../views/ProductDetail';
 import WishList from '../views/WishList';
 import TransactionHistory from '../views/TransactionHistory';
 import MyPage from '../views/MyPage';
+import SearchView from '../views/SearchView';
 
 Vue.use(VueRouter);
 
@@ -19,6 +20,11 @@ const routes = [
     path: '/',
     name: 'main',
     component: MainView,
+  },
+  {
+    path: '/search',
+    name: 'search',
+    component: SearchView,
   },
   {
     path: '/sell',
