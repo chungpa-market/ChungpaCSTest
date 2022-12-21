@@ -77,7 +77,9 @@
                 <div class="line" id="line5"></div>
 
                 <div class="btn-container">
-                    <button type="submit">등록</button>
+                    <router-link to="/">
+                        <button type="submit">등록</button>
+                    </router-link>
                 </div>
             </div>
         </div>

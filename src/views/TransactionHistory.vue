@@ -1,5 +1,6 @@
 <template>
   <main>
+    <NaviComp></NaviComp>
     <div class="body-header">
       <img
         src="../assets/res/거래btn.png"
@@ -49,8 +50,12 @@
 </template>
 
 <script>
+import NaviComp from '@/components/NaviComp.vue';
 export default {
   title: '거래내역페이지',
+  components:{
+    NaviComp,
+  }
 };
 </script>
 

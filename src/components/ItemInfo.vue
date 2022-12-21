@@ -15,7 +15,9 @@
           <span>{{ product.price }}</span>
         </div>
         <div class="detail-btn-container" v-if="role === '판매자'">
-          <button>수정</button>
+          <router-link to="/write">
+            <button>수정</button>
+          </router-link>
           <button>삭제</button>
         </div>
       </div>
@@ -71,14 +73,11 @@
       <div class="btn-container">
         <ul>
           <li>
-            <button>
-              <img
-                src="../assets/res/찜하기.png"
-                width="60px"
-                height="60px"
-                alt="찜하기"
-              />
-            </button>
+            <router-link to="/wish">
+              <button>
+                <img src="../assets/res/찜하기.png" width="60px" height="60px" alt="찜하기" />
+              </button>
+            </router-link>
           </li>
           <li>
             <a href=""
@@ -90,13 +89,11 @@
             /></a>
           </li>
           <li>
-            <a href=""
-              ><img
-                src="../assets/res/거래btn.png"
-                width="60px"
-                height="60px"
-                alt="문의하기"
-            /></a>
+            <router-link to="/transactionhistory">
+              <button>
+                <img src="../assets/res/거래btn.png" width="60px" height="60px" alt="문의하기" />
+              </button>
+            </router-link>
           </li>
         </ul>
       </div>

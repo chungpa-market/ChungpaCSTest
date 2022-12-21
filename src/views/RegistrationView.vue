@@ -54,7 +54,10 @@
                 </div>
 
                 <div class="btn-container">
-                    <button v-on:click="registration" type="submit">회원가입</button>
+                    <router-link to="/">
+                        <button v-on:click="registration" type="submit">회원가입</button>
+                    </router-link>
+                    
                 </div>
             </div>
         </div>

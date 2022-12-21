@@ -1,18 +1,18 @@
 <template>
   <article class="list-item">
     <img
-      src="../assets/res/no-item-image.png"
+      src="../assets/res/융사글.jpg"
       width="240"
       height="170"
       alt=""
     />
     <div class="item-content">
       <div class="item-info">
-        <h1>Name</h1>
-        <div>FREE</div>
+        <h1>융합적 사고와 글쓰기</h1>
+        <div>5000</div>
       </div>
       <p>
-        Please add your content here. Keep it short and simple. And smile :)
+        사용감 별로 없고 깨끗합니다. 싸게 드릴테니 가격 흥정 안돼요!!
       </p>
     </div>
   </article>

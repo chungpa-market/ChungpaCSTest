@@ -1,5 +1,6 @@
 <template>
   <div class="wish">
+    <NaviComp></NaviComp>
     <header class="body-header">
       <img src="../assets/res/찜하기.png" alt="" width="60px" height="60px" />찜목록
     </header>
@@ -16,12 +17,13 @@
 
 <script>
 import ItemComp from '@/components/ItemComp.vue';
-
+import NaviComp from '@/components/NaviComp.vue';
 export default {
   title: '장바구니',
   name: 'wishList',
   components: {
     ItemComp,
+    NaviComp,
   },
 };
 </script>

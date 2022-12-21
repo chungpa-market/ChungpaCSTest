@@ -1,5 +1,6 @@
 <template>
   <main>
+    <NaviComp></NaviComp>
     <div class="selected"><span>도서 </span></div>
     <div class="line"></div>
     <div class="product-detail-container">
@@ -105,6 +106,7 @@
 import ItemInfo from '@/components/ItemInfo.vue';
 import ReviewComment from '@/components/ReviewComment.vue';
 import AnotherItem from '@/components/AnotherItem.vue';
+import NaviComp from '@/components/NaviComp.vue';
 
 export default {
   title: '상세페이지',
@@ -113,6 +115,7 @@ export default {
     ItemInfo,
     ReviewComment,
     AnotherItem,
+    NaviComp,
   },
   data() {
     return {

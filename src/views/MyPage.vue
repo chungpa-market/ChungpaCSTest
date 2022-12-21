@@ -24,9 +24,9 @@
           </div>
         </div>
         <div class="deal-info-a-tags">
-          <a class="item" href="">찜 목록</a>
-          <a class="item" href="">받은 거래 후기</a>
-          <a class="item" href="">거래 내역</a>
+          <router-link class="item" href="" to="/wish">찜 목록</router-link>
+          <router-link class="item" href="" to="/detail">받은 거래 후기</router-link>
+          <router-link class="item" href="" to="/transactionhistory">거래 내역</router-link>
           <a class="item" href="">채팅</a>
         </div>
         <div class="btn-container">
